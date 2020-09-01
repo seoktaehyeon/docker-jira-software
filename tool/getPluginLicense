@@ -1,0 +1,13 @@
+#!/bin/bash
+set -ex
+JIRA_LOG_DIR="/var/atlassian/application-data/jira/log"
+JIRA_SERVER_ID=$(grep 'Server ID' ${JIRA_LOG_DIR}/* | tail -1 | awk '{print $NF}')
+[[ -z "${JIRA_SERVER_ID}" ]] && {
+    echo "Cannot get JIRA Server ID"
+    exit 1
+}
+java -jar /opt/atlassian/tool/atlassian-agent.jar \
+    -o odo \
+    -m odo@qualitysphere.github.io \
+    -s "${JIRA_SERVER_ID}" \
+    -p "${1?'Project ID is required'}"
