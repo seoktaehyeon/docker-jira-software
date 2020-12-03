@@ -1,4 +1,4 @@
-FROM atlassian/jira-software:8.11
+FROM atlassian/jira-software:8.12
 LABEL maintainer="v.stone@163.com" \
       jdbc_url="https://confluence.atlassian.com/doc/database-jdbc-drivers-171742.html" \
       agent_url="https://gitee.com/pengzhile/atlassian-agent"
@@ -12,4 +12,3 @@ RUN chmod +x /usr/local/bin/getJiraLicense && \
     cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     echo 'Asia/Shanghai' > /etc/timezone
 ENV JAVA_OPTS="-javaagent:/opt/atlassian/tool/atlassian-agent.jar"
-
