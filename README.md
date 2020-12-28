@@ -1,7 +1,7 @@
 ## Highlight
 
 - Base image is [`atlassian/jira-software:8.12`](https://hub.docker.com/r/atlassian/jira-software/tags?page=1&ordering=-name&name=8.12)
-- Image digest is `8169de0e363c`
+- Image digest is `a3a0fceb8dae`
 - Support `MySQL`
 - Timezone is `Asia/Shanghai`
 - Support `Chinese`
