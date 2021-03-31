@@ -1,5 +1,5 @@
 #!/bin/bash
-set -ex
+set -e
 JIRA_LOG_DIR="/var/atlassian/application-data/jira/log"
 JIRA_SERVER_ID=$(grep 'Server ID' ${JIRA_LOG_DIR}/* | tail -1 | awk '{print $NF}')
 [[ -z "${JIRA_SERVER_ID}" ]] && JIRA_SERVER_ID="${1?'Server ID is required'}"
