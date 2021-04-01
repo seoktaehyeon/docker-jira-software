@@ -15,7 +15,6 @@ RUN cd /opt \
     && chmod +x /usr/local/bin/getJiraLicense \
     && chmod +x /usr/local/bin/getPluginLicense \
     && chmod +x /usr/local/bin/setMem.sh \
-    && chmod -R 777 /opt/atlassian/tool \
     && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo 'Asia/Shanghai' > /etc/timezone \
     && sed -i 's#${JAVA_OPTS}#${JAVA_OPTS} -javaagent:/opt/atlassian-agent.jar#' /opt/atlassian/jira/bin/setenv.sh \
