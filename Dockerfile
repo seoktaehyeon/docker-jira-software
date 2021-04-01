@@ -9,7 +9,8 @@ COPY tool/setMem.sh /usr/local/bin
 ADD https://qualitysphere.github.io/objects/atlassian-agent.jar /opt
 ADD https://qualitysphere.github.io/objects/SSLPoke.class /opt
 ADD https://downloads.mysql.com/archives/get/p/3/file/mysql-connector-java-5.1.49.tar.gz /opt
-RUN tar zvxf /opt/mysql-connector-java-5.1.49.tar.gz \
+RUN cd /opt \
+    && tar zvxf mysql-connector-java-5.1.49.tar.gz \
     && cp /opt/mysql-connector-java-5.1.49/mysql-connector-java-5.1.49.jar /opt/atlassian/jira/lib \
     && chmod +x /usr/local/bin/getJiraLicense \
     && chmod +x /usr/local/bin/getPluginLicense \
