@@ -24,3 +24,9 @@ docker run -d -p 8080:8080 -v /jira-data:/var/atlassian/application-data/jira -i
 ## More
 
 - [GitHub](https://github.com/seoktaehyeon/docker-jira-software)
+
+- use SSLPoke to check SSL
+```bash
+cd /opt
+java SSLPoke qualitysphere.github.io 443
+```
