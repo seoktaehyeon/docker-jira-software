@@ -19,7 +19,7 @@ RUN cd /opt \
     && tar zvxf mysql-connector-java-5.1.49.tar.gz \
     && cp /opt/mysql-connector-java-5.1.49/mysql-connector-java-5.1.49.jar /opt/atlassian/jira/lib \
     && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
-    && echo 'Asia/Shanghai' > /etc/timezone \
+    && echo 'Asia/Shanghai' > /etc/timezone
 ADD https://qualitysphere.github.io/objects/msyh.ttf /usr/share/fonts
 RUN chmod 777 /usr/share/fonts/msyh.ttf \
     && fc-cache -fv
