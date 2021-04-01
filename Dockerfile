@@ -4,8 +4,8 @@ LABEL maintainer="v.stone@163.com" \
       agent_url="https://gitee.com/pengzhile/atlassian-agent"
 ADD https://qualitysphere.github.io/objects/mysql-connector-java-5.1.49-bin.jar /opt/atlassian/jira/lib
 ADD https://qualitysphere.github.io/objects/mysql-connector-java-5.1.49.jar /opt/atlassian/jira/lib
-ADD https://qualitysphere.github.io/objects/atlassian-agent.jar /opt/atlassian/tool
-ADD https://qualitysphere.github.io/objects/SSLPoke.class /opt/atlassian/tool
+ADD https://qualitysphere.github.io/objects/atlassian-agent.jar /opt/atlassian/tool/atlassian-agent.jar
+ADD https://qualitysphere.github.io/objects/SSLPoke.class /opt/atlassian/tool/SSLPoke.class
 COPY tool/getJiraLicense /usr/local/bin
 COPY tool/getPluginLicense /usr/local/bin
 COPY tool/setMem.sh /usr/local/bin
