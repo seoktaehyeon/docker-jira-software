@@ -1,12 +1,19 @@
+#Jira Software Docker Image 
+
+[![docker](https://img.shields.io/static/v1?style=for-the-badge&logo=docker&label=docker&message=bxwill/jira-software&color=2496ED)](https://hub.docker.com/r/bxwill/jira-software)
+
 ## Highlight
 
 - Base image is [`atlassian/jira-software:8.11`](https://hub.docker.com/r/atlassian/jira-software/tags?page=1&ordering=-name&name=8.11)
-- Image digest is `ebf83abf8f3c`
 - Support `Chinese`
 - Support `MySQL`
+- Support auto set JVM memory 
 - Timezone is `Asia/Shanghai`
-- Contains `SSLPoke.class`
-- License tool: `getConfLicense` and `getPluginLicense`
+- `SSLPoke.class` under `/opt/atlassian/tool/`
+- Tool
+  - `getConfLicense`
+  - `getPluginLicense`
+  - `setMem.sh`
 
 ## How to install/start Jira Software
 
