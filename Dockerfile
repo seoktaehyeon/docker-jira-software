@@ -12,9 +12,11 @@ ADD https://downloads.mysql.com/archives/get/p/3/file/mysql-connector-java-5.1.4
 RUN cd /opt \
     && tar zvxf mysql-connector-java-5.1.49.tar.gz \
     && cp /opt/mysql-connector-java-5.1.49/mysql-connector-java-5.1.49.jar /opt/atlassian/jira/lib \
-    && chmod +x /usr/local/bin/getJiraLicense \
-    && chmod +x /usr/local/bin/getPluginLicense \
-    && chmod +x /usr/local/bin/setMem.sh \
+    && chmod 777 /usr/local/bin/getJiraLicense \
+    && chmod 777 /usr/local/bin/getPluginLicense \
+    && chmod 777 /usr/local/bin/setMem.sh \
+    && chmod 777 /opt/atlassian-agent.jar \
+    && chmod 777 /opt/SSLPoke.class \
     && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo 'Asia/Shanghai' > /etc/timezone \
     && sed -i 's#${JAVA_OPTS}#${JAVA_OPTS} -javaagent:/opt/atlassian-agent.jar#' /opt/atlassian/jira/bin/setenv.sh \
