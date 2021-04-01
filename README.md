@@ -9,7 +9,7 @@
 - Support `MySQL`
 - Support auto set JVM memory 
 - Timezone is `Asia/Shanghai`
-- `SSLPoke.class` under `/opt/atlassian/tool/`
+- `SSLPoke.class` under `/opt`
 - Tool
   - `getConfLicense`
   - `getPluginLicense`
