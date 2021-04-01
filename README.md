@@ -11,7 +11,7 @@
 - Timezone is `Asia/Shanghai`
 - `SSLPoke.class` under `/opt`
 - Tool
-  - `getConfLicense`
+  - `getJiraLicense`
   - `getPluginLicense`
   - `setMem.sh`
 
