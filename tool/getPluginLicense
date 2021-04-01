@@ -6,7 +6,7 @@ JIRA_SERVER_ID=$(grep 'Server ID' ${JIRA_LOG_DIR}/* | tail -1 | awk '{print $NF}
     echo "Cannot get JIRA Server ID"
     exit 1
 }
-java -jar /opt/atlassian/tool/atlassian-agent.jar \
+java -jar /opt/atlassian-agent.jar \
     -o odo \
     -m odo@qualitysphere.github.io \
     -s "${JIRA_SERVER_ID}" \

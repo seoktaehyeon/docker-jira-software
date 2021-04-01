@@ -3,7 +3,7 @@ set -e
 JIRA_LOG_DIR="/var/atlassian/application-data/jira/log"
 JIRA_SERVER_ID=$(grep 'Server ID' ${JIRA_LOG_DIR}/* | tail -1 | awk '{print $NF}')
 [[ -z "${JIRA_SERVER_ID}" ]] && JIRA_SERVER_ID="${1?'Server ID is required'}"
-java -jar /opt/atlassian/tool/atlassian-agent.jar \
+java -jar /opt/atlassian-agent.jar \
     -o odo \
     -m odo@qualitysphere.github.io \
     -s "${JIRA_SERVER_ID}" \
